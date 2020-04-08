@@ -30,8 +30,8 @@ import io.material.materialthemebuilder.ui.themesummary.ThemeSummaryFragment
  */
 class MainViewPagerAdapter(
   private val context: Context,
-  fragmentManager: FragmentManager
-) : FragmentStatePagerAdapter(fragmentManager) {
+  fm: FragmentManager
+) : FragmentStatePagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
 
   enum class MainFragments(val titleRes: Int) {
     INSTRUCTIONS(R.string.tab_title_instructions),
